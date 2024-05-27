@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo d">
+                <img src="logo.jpeg" alt="SalesTug Voice AI Logo" class="logol" width="50">
+                <span class="logoname">SalesTug Voice AI</span>
+            </div>
+
+            <div class="searchbox d">
+                <form action="#">
+                    <input type="text" placeholder="Search">
+                    <i class="fa fa-search"></i>
+                </form>
+            </div>
+        </div>
+
+        <div class="sidebar bg">
+            <ul>
+                <div class="sidebar">
+                    <div class="logo">
+                    </div>
+                    
+                    <ul>
+                        <li onclick="showContent('Daily Call Summary')">Daily Call Summary</li>
+                        <li onclick="showContent('Call Recordings')">Call Recordings</li>
+                        <li onclick="showContent('Call Outcomes')">Call Outcomes</li>
+                        <li onclick="showContent('Lead Status')">Lead Status</li>
+                        <li onclick="showContent('Response Rate')">Response Rate</li>
+                        <li onclick="showContent('Appointments Scheduled')">Appointments Scheduled</li>
+                        <li onclick="showContent('Performance Metrics')">Performance Metrics</li>
+                        <li onclick="showContent('Transcripts')">Transcripts</li>
+                    </ul>
+                </div>
+                
+                
+            </ul>
+        </div>
+
+        <div class="header">
+            <div class="tittle">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+        <div class="main-content" id="main-content">
+            <h2>Welcome</h2>
+            <p>Select an item from the sidebar to display its content.</p>
+        </div>
+
+    </div>
+
+    <script>
+        function showContent(content) {
+            const mainContent = document.getElementById('main-content');
+            mainContent.innerHTML = `<h2>${content}</h2><p>Content for ${content} goes here.</p>`;
+        }
+    </script>
+
+
+</body>
+</html>
